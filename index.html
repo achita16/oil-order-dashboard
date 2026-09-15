@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="th"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Calculate oil order</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="styles-extra.css"><link rel="stylesheet" href="styles-light.css">
+</head><body><main class="page">
+  <header class="masthead"><div><p class="eyebrow">POONPERM OIL LTD.</p><h1>Calculate oil order</h1><p class="subtitle">วางแผนการสั่งน้ำมันในมุมมองเดียว</p></div><div class="controls"><button id="refreshBtn">รีเฟรชข้อมูล</button><span class="data-status"><i></i><span id="dataStatus">ข้อมูลตัวอย่าง</span></span></div></header>
+  <section id="productColumns" class="product-columns"></section>
+  <section class="delivery"><div class="delivery-head"><div><span class="mini-label">DELIVERY SETUP</span><label class="truck-select">ขนาดรถ <select id="truckSize"><option value="30000" selected>รถใหญ่ · 30,000 ลิตร · 10 ช่อง</option><option value="20000">รถเล็ก · 20,000 ลิตร · 5 ช่อง</option></select></label></div><div class="capacity"><span>รวมที่เลือก</span><strong id="loadTotal">0 ลิตร</strong><small id="capacityRemaining">เหลือ 30,000 ลิตร</small></div></div><div class="truck-title"><span id="truckTypeLabel">รถใหญ่</span> · <b id="truckSlotLabel">10 ช่อง</b> · รวมทั้งคัน <span id="truckCapacityLabel">30,000 ลิตร</span></div><div class="truck-stage"><img src="tanker-truck.png" alt="รถขนส่งน้ำมันแบบแทงก์หลายช่อง"><div id="loadSlots" class="load-slots"></div></div></section>
+  <section id="afterDelivery" class="after-delivery"></section>
+  <section class="formula-note">StD ปัจจุบัน = (คงเหลือ − Dead stock 12% ของความจุถัง) ÷ ยอดขายเฉลี่ยที่เลือก · StD ใหม่ = ((คงเหลือ + Load) − Dead stock 12% ของความจุถัง) ÷ ยอดขายเฉลี่ยที่เลือก</section>
+  <section class="data-panels"><article><h2>News data</h2><p><b>WTI :</b> <span class="awaiting">รอเชื่อมข้อมูลราคา</span></p></article><article><h2>Page facebook</h2><p class="awaiting">รอเชื่อมข่าวล่าสุดและสรุปแนวโน้ม</p></article></section>
+</main>
+<template id="productTemplate"><article class="product"><div class="product-code"></div><div class="tank-wrap"><div class="tank"><div class="tank-fill"></div><div class="tank-order"></div></div><span class="tank-percent"></span></div><div class="sales-lines"><label>ยอดขายที่ใช้คำนวณ (เลือกช่วงวันที่)<div class="range-inputs"><input type="date" class="range-start"><span class="range-sep">ถึง</span><input type="date" class="range-end"></div></label><p class="selected-sales"><b></b><span> ลิตร / วัน</span></p><p class="dead-stock">Dead stock 12%: <b></b> ลิตร</p></div><label class="remaining-field">คงเหลือ <input class="remaining" type="number" min="0" step="100"><span>ลิตร</span></label><p class="stock-current">StD<small>(ปัจจุบัน)</small> <b></b></p></article></template>
+<script src="app.js"></script></body></html>
