@@ -2,10 +2,10 @@
 // ต้องใช้ /pub?output=csv (ไม่ใช่ /pubhtml) เพราะ fetch() ต้องการข้อมูลดิบแบบ CSV
 const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1USobfqcmWLx3rlCr0ld-bSvAxjtQtjMn2yg2zFzhqsbv-Vz04v5I0dBT8ipsIA/pub?output=csv";
 const PRODUCTS = [
-  { id: "g95", code: "T01 GASOHOL 95", color: "#f5b874", remaining: 8200, capacity: 15000, rangeStart: null, rangeEnd: null },
-  { id: "g91", code: "T02 GASOHOL 91", color: "#86d4a6", remaining: 6400, capacity: 15000, rangeStart: null, rangeEnd: null },
-  { id: "e20", code: "T03 E20", color: "#b5dc8e", remaining: 5100, capacity: 15000, rangeStart: null, rangeEnd: null },
-  { id: "diesel", code: "T04 DIESEL", color: "#83c9eb", remaining: 12400, capacity: 20000, rangeStart: null, rangeEnd: null },
+  { id: "g95", code: "T01 GASOHOL 95", color: "#f5b874", remaining: 8200, capacity: 20000, rangeStart: null, rangeEnd: null },
+  { id: "g91", code: "T02 GASOHOL 91", color: "#86d4a6", remaining: 6400, capacity: 10000, rangeStart: null, rangeEnd: null },
+  { id: "e20", code: "T03 E20", color: "#b5dc8e", remaining: 5100, capacity: 10000, rangeStart: null, rangeEnd: null },
+  { id: "diesel", code: "T04 DIESEL", color: "#83c9eb", remaining: 12400, capacity: 30000, rangeStart: null, rangeEnd: null },
 ];
 const demoSales = { g95: 1140, g91: 820, e20: 610, diesel: 1870 };
 let salesRows = [];
